@@ -1,4 +1,4 @@
-'''The INFINITY TREE Algorithym'''
+"""The INFINITY TREE Algorithym"""
 
 
 
