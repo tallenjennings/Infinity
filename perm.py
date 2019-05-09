@@ -14,7 +14,7 @@ def perm1(lst):
                 l.append([x]+p)
         return l
 
-data = list('abc')
+data = list([['a'],[['aa'],['ab']]])
 print(perm1)
 for p in perm1(data):
     print(p)
