@@ -33,14 +33,13 @@ def perm2(lst):
             xs = lst[:i] + lst[i+1:]
             for p in perm1(xs):
                 yield [x]+p
-        return l
 
-data = list(('abcdefghij'))
-print(perm1)
-for p in perm1(data):
-    print(p)
+#data = list(('abcdefghij'))
+#print(perm1)
+#for p in perm1(data):
+#    print(p)
 
-data = list(('abcdefghij'))
+data = list(('abcdefghi'))
 print(perm2)
 for p in perm2(data):
     print(p)
