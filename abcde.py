@@ -1,84 +1,40 @@
 Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license()" for more information.
->>> x = []
->>> x
-[]
->>> x + []
-[]
->>> x
-[]
->>> x + ()
-Traceback (most recent call last):
-  File "<pyshell#4>", line 1, in <module>
-    x + ()
-TypeError: can only concatenate list (not "tuple") to list
->>> x + ['']
-['']
->>> x
-[]
->>> x + [,]
-SyntaxError: invalid syntax
->>> x + ['',]
-['']
->>> x
-[]
->>> x + ['','']
+>>> a=['']
+>>> b=a+a
+>>> b
 ['', '']
->>> x
-[]
->>> x + x
-[]
->>> x+x+x
-[]
->>> x = ['',]
->>> x
-['']
->>> x+x
-['', '']
->>> x+x+x
-['', '', '']
->>> x = [y]
-Traceback (most recent call last):
-  File "<pyshell#18>", line 1, in <module>
-    x = [y]
-NameError: name 'y' is not defined
->>> y = []
->>> x
-['']
->>> x=[]
->>> x+y
-[]
->>> z=[]
->>> x
-[]
->>> y
-[]
->>> y = [z]
->>> x
-[]
->>> y
-[[]]
->>> z
-[]
->>> x+y
-[[]]
->>> y+z
-[[]]
->>> a=[]
 >>> b=[a]
+>>> a
+['']
+>>> b
+[['']]
+>>> c=a+b
+>>> c
+['', ['']]
 >>> c=[b]
+>>> c
+[[['']]]
+>>> a=[]
+>>> c
+[[['']]]
+>>> b
+[['']]
 >>> a
 []
+>>> b=[a]
 >>> b
 [[]]
->>> c
-[[[]]]
->>> c+b
-[[[]], []]
+>>> c=[b]
 >>> d=[c]
 >>> e=[d]
 >>> f=[e]
 >>> g=[f]
+>>> h=[g]
+>>> i=[h=
+   
+SyntaxError: invalid syntax
+>>> i=[g]
 >>> a
 []
 >>> b
@@ -89,130 +45,90 @@ NameError: name 'y' is not defined
 [[[[]]]]
 >>> e
 [[[[[]]]]]
->>> f
-[[[[[[]]]]]]
 >>> g
 [[[[[[[]]]]]]]
+>>> h
+[[[[[[[[]]]]]]]]
+>>> i
+[[[[[[[[]]]]]]]]
 >>> a+a
 []
->>> a+b
-[[]]
 >>> b+b
 [[], []]
->>> a=[,]
-SyntaxError: invalid syntax
->>> a=['',]
+>>> h+h+b
+[[[[[[[[]]]]]]], [[[[[[[]]]]]]], []]
+>>> aa=a+b+c
+>>> aa
+[[], [[]]]
+>>> cls
+Traceback (most recent call last):
+  File "<pyshell#37>", line 1, in <module>
+    cls
+NameError: name 'cls' is not defined
+>>> clear
+Traceback (most recent call last):
+  File "<pyshell#38>", line 1, in <module>
+    clear
+NameError: name 'clear' is not defined
 >>> a
-['']
->>> b
-[[]]
->>> a+b
-['', []]
->>> a
-['']
->>> z=a+b
->>> z
-['', []]
->>> y= z+c
->>> y
-['', [], [[]]]
->>> d
-[[[[]]]]
->>> e
-[[[[[]]]]]
->>> a+a
-['', '']
->>> a
-['']
->>> a+a
-['', '']
->>> a+a+a
-['', '', '']
->>> c
-[[[]]]
->>> a+b
-['', []]
->>> a
-['']
+[]
 >>> b
 [[]]
 >>> c
 [[[]]]
->>> a+b
-['', []]
->>> a+a+a
-['', '', '']
+>>> b+b
+[[], []]
 >>> d
 [[[[]]]]
->>> c+b+a
-[[[]], [], '']
->>> a+a+a+a
-['', '', '', '']
->>> b+a+a
-[[], '', '']
->>> a+b+a
-['', [], '']
->>> a+a+b
-['', '', []]
 >>> c+a
-[[[]], '']
->>> a+c
-['', [[]]]
->>> e
-[[[[[]]]]]
->>> a+a+a+a+a
-['', '', '', '', '']
->>> b+a+a+a
-[[], '', '', '']
->>> a+b+a+a
-['', [], '', '']
->>> a+a+b+a
-['', '', [], '']
->>> a+a+a+b
-['', '', '', []]
->>> c+a+a
-[[[]], '', '']
->>> a+c+a
-['', [[]], '']
->>> a+a+c
-['', '', [[]]]
+[[[]]]
 >>> c+b
 [[[]], []]
->>> b+c
-[[], [[]]]
+>>> a=['']
+>>> c+a
+[[[]], '']
+>>> [[[][]]]
+SyntaxError: invalid syntax
+>>> c[a]
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    c[a]
+TypeError: list indices must be integers or slices, not list
+>>> a
+['']
+>>> b
+[[]]
+>>> b=[a]
+>>> b
+[['']]
+>>> c
+[[[]]]
+>>> c=[b]
+>>> d=[c]
+>>> d
+[[[['']]]]
+>>> d+c
+[[[['']]], [['']]]
 >>> d+a
-[[[[]]], '']
->>> a+d
-['', [[[]]]]
->>> 
-e
-[[[[[]]]]]
->>> d+a
-[[[[]]], '']
->>> a+d
-['', [[[]]]]
->>> c+b+a
-[[[]], [], '']
->>> c+a+b
-[[[]], '', []]
->>> a+c+b
-['', [[]], []]
->>> a+b+c
-['', [], [[]]]
+[[[['']]], '']
 >>> b+b+a
-[[], [], '']
->>> b+a+b
-[[], '', []]
->>> a+b+b
-['', [], []]
->>> b+a+a+a
-[[], '', '', '']
->>> a+b+a+a
-['', [], '', '']
->>> a+a+b+a
-['', '', [], '']
->>> a+a+a+b
-['', '', '', []]
->>> a+a+a+a+a
-['', '', '', '', '']
+[[''], [''], '']
+>>> b
+[['']]
+>>> c
+[[['']]]
+>>> c1=[b]
+>>> c1
+[[['']]]
+>>> c2=b+b
+>>> c2
+[[''], ['']]
+>>> d
+[[[['']]]]
+>>> d2=[c2+a]
+>>> d2
+[[[''], [''], '']]
+>>> e2=[d2+a]
+>>> e2
+[[[[''], [''], ''], '']]
 >>> 
