@@ -1,4 +1,5 @@
-a = []
+a=[]
+b = [a]
 ch = 'a'
 x = 25
 for i in range(x):
