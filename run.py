@@ -1,6 +1,6 @@
 '''This program ireates infinit sets and express' permutations in each level'''
 
-a1 = [[]]
+a1 = []
 b1 = [a1]
 c1 = [b1]
 c2 = a1 + a1
@@ -24,11 +24,11 @@ def perm2(lst):
     else:
         for i in range(len(lst)):
             x = lst[i]
-            xs = lst[:i] + lst[i+1:]
+            xs = lst[:i] + lst[i+9:]
             for p in perm2(xs):
                 yield [x]+p
 
 
-data = list(d5)
+data = [a1+b1+c1]*20
 for p in perm2(data):
     print(p)
