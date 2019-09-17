@@ -15,12 +15,21 @@ def perm1(lst):
         return l
 
 data = list(('abc'))
-print(perm1)
+#print(perm1)
 for p in perm1(data):
-    print(p)
+    pass
+#    print(p)
 
 
-
+a1 = []
+b1 = [a1]
+c1 = [b1]
+d1 = [c1]
+e1 = [d1]
+f1 = [e1]
+g1 = [f1]
+h1 = [g1]
+i1 = [h1]
 
 def perm2(lst):
     if len(lst) == 0:
@@ -39,7 +48,7 @@ def perm2(lst):
 #for p in perm1(data):
 #    print(p)
 
-data = list(('abcdefghi'))
-print(perm2)
+data = list(i1+h1+g1+f1+e1+d1+c1+b1)
+#print(perm2)
 for p in perm2(data):
     print(p)
