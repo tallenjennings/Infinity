@@ -1,60 +1,61 @@
 '''This program will take a key and convert it to binary'''
 
+
 #enter key to be converted
-binaryKey = input("enter binary key>>")
+binaryKey = int(input("enter binary key>>"))
 print("\n")
 
 
 #key function
-def location(keyBinary):
+def location(binaryKey):
 
-    count = 0
+    count =0
 
-    baseKey = 1
+    key =1
 
-    powerSum = (2 ** count) -1
+    binary = ""
 
-    while (baseKey != int(binaryKey)):
+    while key < binaryKey:
 
-        if 2**count < int(binaryKey):
+        if 2**count < binaryKey:
+
+            print("figuring out the power: ")
             count += 1
-            print("base key: " + str(baseKey))
             print("count: " + str(count))
-            power = 2**count
-            print("power: " + str(power))
+            key = (2**(count)/2)-1
+            print("key: " + str(int(key)) + "\n")
 
-        elif 2**count == int(binaryKey):
-            print("\n")
-            print("correct power: " + "2**" + str(count))
-
-            break
-        elif 2**count > int(binaryKey):
-            print("\n")
-            print("correct power: " + "2**" + str(count))
-
-            break
         else:
-            print("pass")
-            pass
+            break
+
+    while count > 1:
+
+        if (key + ((2**count)/2)) <= binaryKey:
+            key = key + ((2**count)/2)
+            print("Power: ")
+            count -= 1
+            print("count: " + str(count))
+            print("key: " + str(int(key)) + "\n")
+            binary = binary + "1"
+            print("binary: " + binary + "\n")
+
+        #elif (key + ((2**count)/2)) < binaryKey:
+            #key = key + ((2**count)/2)
+            #count -= 1
+            #print("count: " + str(count))
+            #binary = binary + "1"
+
+        else:
+            print("Power: ")
+            count -= 1
+            print("count: " + str(count))
+            print("key: " + str(int(key)) + "\n")
+            binary = binary + "0"
+            print("binary: " + binary + "\n")
 
 
-    print("key asked for: " + str(binaryKey))
-    print("base string: " + count * "0"  )
-    baseStringKey = 2**count - 1
-    print("base key: " + str(baseStringKey))
 
-    #key = 15555
-    #binary string = 1110011000100
-    countTwo = 0
-    while countTwo < count:
-        countTwo += 1
-        key = 2**countTwo
-        print("num")
-
-
-
-
-    print(key)
+    print("Binary key: " + str(binary))
 
 
 location(binaryKey)
